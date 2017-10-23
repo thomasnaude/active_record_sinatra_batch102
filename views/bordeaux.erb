@@ -1,0 +1,12 @@
+<h1>Restaurants à Bordeaux</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a>
+      <%= " - #{restaurant.address}" %>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/">< Retour</a>

@@ -1,0 +1,14 @@
+<h1><%= @restaurant.name %></h1>
+<form action="/restaurants/<%= @restaurant.id %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="X">
+</form>
+<p><%= @restaurant.address %></p>
+<% if @restaurant.rating %>
+  <%=  "*" * @restaurant.rating %>
+<% else %>
+  <p>Pas encore de notes</p>
+<% end %>
+<a href="/restaurants/<%= @restaurant.id %>/edit">Modifier ce restaurant</a>
+
+<a href="/">< Retour</a>

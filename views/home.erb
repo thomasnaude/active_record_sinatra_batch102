@@ -1,0 +1,26 @@
+<h1>Best restaurants in Bordeaux</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a>
+      <%= " - #{restaurant.address}" %>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <a href="/restaurants/new" class="btn btn-primary">Ajouter un restaurant</a>
+</p>
+<p>
+  <a href="/bordeaux" class="btn btn-primary">Restaurants à Bordeaux</a>
+</p>
+<p>
+  <a href="/best" class="btn btn-primary">Notre meilleur restaurant</a>
+</p>
+
+
+
+<!-- Sublime Text : erb -->
+<!-- er + tab <%  %> -->
+<!-- pe + tab <%=  %> -->
